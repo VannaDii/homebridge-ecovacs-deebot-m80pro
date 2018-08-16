@@ -17,6 +17,10 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# Test results
+tests/_result*
+homebridge-ecovacs-deebot-m80pro.json
+
 # nyc test coverage
 .nyc_output
 

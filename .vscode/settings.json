@@ -1,0 +1,14 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.vscode": true,
+    "**/node_modules": true,
+    "homebridge-ecovacs-deebot-m80pro.json": true
+  },
+  "eslint.packageManager": "yarn",
+  "jslint.enable": false
+}
