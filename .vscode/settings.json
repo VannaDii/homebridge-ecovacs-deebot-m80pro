@@ -10,5 +10,6 @@
     "homebridge-ecovacs-deebot-m80pro.json": true
   },
   "eslint.packageManager": "yarn",
-  "jslint.enable": false
+  "jslint.enable": false,
+  "jest.showCoverageOnLoad": true
 }
