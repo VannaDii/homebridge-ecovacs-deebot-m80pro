@@ -24,7 +24,7 @@ build
 .vscode/**/*.sql
 
 # Test results
-tests/_result*
+testResults.*
 homebridge-ecovacs-deebot-m80pro.json
 
 # nyc test coverage
