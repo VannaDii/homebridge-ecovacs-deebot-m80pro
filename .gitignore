@@ -17,6 +17,9 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# VS Code
+.vscode/**/*.sql
+
 # Test results
 tests/_result*
 homebridge-ecovacs-deebot-m80pro.json
