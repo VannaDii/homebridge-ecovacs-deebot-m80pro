@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "posttest": "node ./tools/process-coverage-report.js"
+    "fix-coverage": "node ./tools/process-coverage-report.js"
   },
   "jest": {
     "testResultsProcessor": "./tools/jest-processor-trx.js",
