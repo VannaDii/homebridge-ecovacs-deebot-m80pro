@@ -1,6 +1,6 @@
 {
   "name": "homebridge-ecovacs-deebot-m80pro",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Homebridge accessory implementation for ECOVACS DEEBOT M80 Pro",
   "main": "index.js",
   "scripts": {
@@ -84,5 +84,6 @@
   "engines": {
     "node": ">=0.12.0",
     "homebridge": ">=0.2.0"
-  }
+  },
+  "preferGlobal": true
 }
