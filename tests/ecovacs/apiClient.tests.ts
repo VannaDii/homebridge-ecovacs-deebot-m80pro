@@ -5,9 +5,15 @@ it('Create apiClient', () => {
   expect(new ApiClient()).not.toBeNull();
 });
 
-it('Check apiClient config', () => {
+it('Verify default config when none', () => {
   const client = new ApiClient();
   const configDef = client.getConfig();
+  expect(configDef).toEqual(<Config>{});
+});
+
+it('Verify config saves and returns what saved', () => {
+  let configGot: Config;
+  let client = new ApiClient();
   const configVal: Config = {
     continent: 'na',
     country: 'us',
@@ -15,10 +21,12 @@ it('Check apiClient config', () => {
     email: 'user@domain.tld',
     passwordHash: 'lkajsdbnlkasjdnfbals',
   };
-  expect(() => {
-    client.setConfig(configVal);
-    return 0;
-  }).not.toThrow();
-  expect(client.getConfig()).toEqual(configVal);
-  expect(configDef).not.toEqual(configVal);
+
+  expect(() => client.setConfig(configVal)).not.toThrow();
+  expect(() => (configGot = client.getConfig())).not.toThrow();
+  expect(configGot).toEqual(configVal);
+
+  client = new ApiClient();
+  expect(() => (configGot = client.getConfig())).not.toThrow();
+  expect(configGot).toEqual(configVal);
 });

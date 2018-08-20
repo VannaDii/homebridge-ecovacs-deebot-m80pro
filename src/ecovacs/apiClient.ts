@@ -1,13 +1,14 @@
 import { Config } from './types';
 import { homedir } from 'os';
 import { writeFileSync, readFileSync, mkdirSync, existsSync, PathLike } from 'fs';
-import { join, basename } from 'path';
+import { join, dirname } from 'path';
 
 export class ApiClient {
   private _config: Config;
-  private _configPath: PathLike = ApiClient.getConfigPath();
+  private _configPath: string;
 
   constructor() {
+    this._configPath = ApiClient.getConfigPath();
     this._config = ApiClient.readConfig(this._configPath);
   }
 
@@ -20,26 +21,26 @@ export class ApiClient {
     ApiClient.saveConfig(this._configPath, this._config);
   }
 
-  private static readConfig(path: PathLike): Config {
+  private static readConfig(path: string): Config {
     if (!existsSync(path)) {
       return <Config>{};
     }
-    const data = readFileSync(path, { encoding: 'utf-8' });
+    const data = readFileSync(path, 'r');
     return <Config>JSON.parse(data);
   }
 
-  private static saveConfig(path: PathLike, config: Config): void {
+  private static saveConfig(path: string, config: Config): void {
     writeFileSync(ApiClient.ensureDirs(path), JSON.stringify(config));
   }
 
-  private static getConfigPath(): PathLike {
+  private static getConfigPath(): string {
     return ApiClient.ensureDirs(
-      join(homedir(), '.config', 'homebridge-ecovacs-deebot-m80pro.json')
+      join(homedir(), '.config/homebridge-ecovacs', 'deebot-m80pro.json')
     );
   }
 
-  private static ensureDirs(path: PathLike): PathLike {
-    const basePath = basename(path.toString());
+  private static ensureDirs(path: string): string {
+    const basePath = dirname(path);
     if (!existsSync(basePath)) {
       mkdirSync(basePath);
     }

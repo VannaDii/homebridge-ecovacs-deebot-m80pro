@@ -16,8 +16,8 @@ export class Plugin {
     this.accessory = this.homebridge.platformAccessory;
 
     // Service and Characteristic are from hap-nodejs
-    this.service = this.homebridge.hap.Service;
+    /* this.service = this.homebridge.hap.Service;
     this.characteristic = this.homebridge.hap.Characteristic;
-    this.uUIDGen = this.homebridge.hap.uuid;
+    this.uUIDGen = this.homebridge.hap.uuid; */
   }
 }

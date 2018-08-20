@@ -3,11 +3,7 @@ import { Plugin } from './plugin';
 
 var pluginInstance: Plugin;
 
-export default function(homebridge: API) {
+export default function init(homebridge: API) {
   pluginInstance = new Plugin(homebridge);
-  try {
-    pluginInstance.initialize();
-  } catch (e) {
-    console.error(e);
-  }
+  pluginInstance.initialize();
 }

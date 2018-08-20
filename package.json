@@ -18,6 +18,9 @@
       "cobertura",
       "text-summary"
     ],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -33,6 +36,9 @@
     },
     "testMatch": [
       "**/tests/**/*.+(ts|tsx|js)"
+    ],
+    "setupFiles": [
+      "./mocks/setup.ts"
     ]
   },
   "repository": {

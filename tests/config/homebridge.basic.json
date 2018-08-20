@@ -1,0 +1,11 @@
+{
+  "bridge": {
+    "name": "Homebridge",
+    "username": "00:15:5D:01:0A:0B",
+    "port": 51826,
+    "pin": "123-45-678"
+  },
+  "description": "Gio's home automation bridge",
+  "accessories": [],
+  "platforms": []
+}
