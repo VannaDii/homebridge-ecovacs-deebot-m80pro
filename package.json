@@ -1,8 +1,16 @@
 {
   "name": "homebridge-ecovacs-deebot-m80pro",
   "badges": [
-    "https://palacino.visualstudio.com/Palacino/_apis/build/status/Homebridge%20Ecovacs",
-    "https://palacino.vsrm.visualstudio.com/_apis/public/Release/badge/27345737-816d-4039-b4c5-996cac782428/3/3"
+    {
+      "description": "Build Status",
+      "href": "about:blank",
+      "url": "https://palacino.visualstudio.com/Palacino/_apis/build/status/Homebridge%20Ecovacs"
+    },
+    {
+      "description": "Release Status",
+      "href": "about:blank",
+      "url": "https://palacino.vsrm.visualstudio.com/_apis/public/Release/badge/27345737-816d-4039-b4c5-996cac782428/3/3"
+    }
   ],
   "version": "0.0.2",
   "description": "Homebridge accessory implementation for ECOVACS DEEBOT M80 Pro",
