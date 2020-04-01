@@ -18,7 +18,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "fix-coverage": "node ./tools/process-coverage-report.js"
+    "fix-coverage": "node ./tools/process-coverage-report.js",
+    "debug": "node --nolazy --inspect-brk=9229 ./build/index.js"
   },
   "jest": {
     "testResultsProcessor": "./tools/jest-processor-trx.js",
@@ -82,6 +83,7 @@
   "devDependencies": {
     "@types/jest": "23.3.1",
     "@types/node": "10.7.1",
+    "@types/request-promise": "4.1.42",
     "babel-core": "6.26.3",
     "babel-jest": "23.4.2",
     "eslint": "5.3.0",
@@ -97,5 +99,11 @@
     "node": ">=0.12.0",
     "homebridge": ">=0.2.0"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "dependencies": {
+    "countries-list": "2.3.2",
+    "crypto2": "2.0.0",
+    "request": "2.88.0",
+    "request-promise-native": "1.0.5"
+  }
 }

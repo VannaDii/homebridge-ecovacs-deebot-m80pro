@@ -1,5 +1,5 @@
 import { ApiClient } from '../../src/ecovacs/apiClient';
-import { Config } from '../../src/ecovacs/types';
+import { ApiConfig } from '../../src/ecovacs/apiTypes';
 
 it('Create apiClient', () => {
   expect(new ApiClient()).not.toBeNull();
@@ -8,13 +8,13 @@ it('Create apiClient', () => {
 it('Verify default config when none', () => {
   const client = new ApiClient();
   const configDef = client.getConfig();
-  expect(configDef).toEqual(<Config>{});
+  expect(configDef).toEqual(<ApiConfig>{});
 });
 
 it('Verify config saves and returns what saved', () => {
-  let configGot: Config;
+  let configGot: ApiConfig;
   let client = new ApiClient();
-  const configVal: Config = {
+  const configVal: ApiConfig = {
     continent: 'na',
     country: 'us',
     deviceId: Date.now().toString(),

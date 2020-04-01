@@ -11,5 +11,5 @@
   },
   "eslint.packageManager": "yarn",
   "jslint.enable": false,
-  "jest.showCoverageOnLoad": true
+  "jest.showCoverageOnLoad": false
 }
